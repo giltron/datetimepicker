@@ -127,6 +127,11 @@ export type AndroidNativeProps = $ReadOnly<{|
   ...TimeOptions,
 
   /**
+   * The date picker locale.
+   */
+  locale?: ?string,
+
+  /**
    * The date picker mode.
    */
   mode: AndroidMode,
@@ -143,6 +148,8 @@ export type AndroidNativeProps = $ReadOnly<{|
 
   onChange: (event: AndroidEvent, date?: Date) => void,
   neutralButtonLabel?: string,
+  positiveButtonLabel?: string,
+  negativeButtonLabel?: string,
 |}>;
 
 export type DatePickerOptions = {|

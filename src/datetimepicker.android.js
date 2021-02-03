@@ -104,6 +104,9 @@ export default function RNDateTimePicker(props: AndroidNativeProps) {
         maximumDate,
         neutralButtonLabel,
         minuteInterval,
+        locale,
+        positiveButtonLabel,
+        negativeButtonLabel,
       });
 
       picker.then(

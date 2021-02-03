@@ -113,6 +113,11 @@ export type AndroidNativeProps = Readonly<
       mode?: AndroidMode;
 
       /**
+       * The date picker locale.
+       */
+      locale?: string;
+
+      /**
        * The display options.
        */
       display?: Display;
@@ -124,6 +129,8 @@ export type AndroidNativeProps = Readonly<
 
       onChange?: (event: AndroidEvent, date?: Date) => void;
       neutralButtonLabel?: string;
+      positiveButtonLabel?: string;
+      negativeButtonLabel?: string;
     }
 >;
 
