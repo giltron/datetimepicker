@@ -38,6 +38,9 @@ function getPicker({
   maximumDate,
   neutralButtonLabel,
   minuteInterval,
+  locale,
+  positiveButtonLabel,
+  negativeButtonLabel,
 }) {
   switch (mode) {
     case MODE_TIME:
@@ -47,6 +50,9 @@ function getPicker({
         minuteInterval,
         is24Hour,
         neutralButtonLabel,
+        locale,
+        positiveButtonLabel,
+        negativeButtonLabel,
       });
     case MODE_DATE:
     default:
@@ -56,6 +62,9 @@ function getPicker({
         minimumDate,
         maximumDate,
         neutralButtonLabel,
+        locale,
+        positiveButtonLabel,
+        negativeButtonLabel,
       });
   }
 }
@@ -72,6 +81,9 @@ export default function RNDateTimePicker(props: AndroidNativeProps) {
     maximumDate,
     neutralButtonLabel,
     minuteInterval,
+    locale,
+    positiveButtonLabel,
+    negativeButtonLabel,
   } = props;
   const valueTimestamp = value.getTime();
 
