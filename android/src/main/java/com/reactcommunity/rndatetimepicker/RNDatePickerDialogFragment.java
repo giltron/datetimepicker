@@ -86,6 +86,10 @@ public class RNDatePickerDialogFragment extends DialogFragment {
                   display
           );
         default:
+          if (args != null && args.containsKey(RNConstants.ARG_LOCALE)) {
+            // for header (NOTE: will change the app locale)
+            Locale.setDefault(getLocale(args));
+          }
           return new RNDismissableDatePickerDialog(
                   activityContext,
                   onDateSetListener,
